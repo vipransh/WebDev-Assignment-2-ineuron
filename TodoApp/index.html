@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[#46B2E0]">
+    <div class="flex flex-col items-center pt-10 gap-4">
+        <h1 class="text-white font-bold">My Todos</h1>
+        <div class="flex flex-row gap-4">
+            <input class="border border-2 border-black pl-3 py-1 rounded-lg" type="text" placeholder="Enter your task" id="task"/>
+            <button id="taskBtn" class="bg-[#8D3DAF] text-white px-3 py-1 rounded-lg">Add Todo</button>
+        </div>
+        <!-- todo container -->
+        <div class="flex flex-row items-center flex-wrap justify-center gap-8 px-8" id="taskContainer">
+            <!-- todo card -->
+        </div>
+    </div>
+    <!-- task update model -->
+    <div index="" class="hidden fixed top-[50%] left-[40%]  bg-[#8D3DAF] w-[20%] py-4 flex flex-col gap-4 items-center rounded-lg z-10" id="editor">
+        <input class="border border-2 border-black pl-3 py-1 rounded-lg outline-none" type="text" placeholder="Enter your task" id="updatedTask"/>
+        <div>
+            <button id="updateTaskBtn" class="bg-[#3944F7] text-white px-3 py-1 rounded-lg">Update</button>
+            <button id="closeTaskPopup" class="bg-[#3944F7] text-white px-3 py-1 rounded-lg">Close</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

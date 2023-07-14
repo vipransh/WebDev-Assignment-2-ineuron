@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <script>
+      sessionStorage.removeItem("product")
+    </script>
+</head>
+<body class="bg-[#5DA3FA]" id="main">
+    <!-- header -->
+    <header class="sticky top-0 w-full z-10 text-gray-600 body-font bg-white">
+        <div class=" mx-auto flex flex-wrap px-5 py-2 flex-row items-center justify-between">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">E-Dukaan</span>
+          </a>
+          <nav class="md:ml-auto hidden md:flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">Home</a>
+            <a class="mr-5 hover:text-gray-900">Products</a>
+            <a class="mr-5 hover:text-gray-900">Contact us</a>
+            <a class="mr-5 hover:text-gray-900">About us</a>
+          </nav>
+          <button class="inline-flex items-center bg-black border-0 py-1 px-3 focus:outline-none  rounded text-base text-white mt-4 md:mt-0" id="cartBtn">Cart 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
+          </button>
+        </div>
+      </header>
+    <div class="flex flex-col md:flex-row  flex-wrap gap-14 items-center md:justify-center px-4 py-2" id="productDiv">
+        <!-- card -->
+        
+    </div>
+
+    <!-- cart -->
+    <div class="hidden bg-white w-full md:w-[40%] fixed z-30 top-14 right-0 flex flex-col gap-2 px-3 py-4" id="cartContainer">
+        <div><button class="flex items-end justify-end w-full  text-gray-600 " id="closeBtn">
+            <span class="sr-only">Close cart</span>
+        
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- products -->
+         <div class="w-full border h-72 overflow-y-auto" id="cartDiv">
+            <h1 class="text-center">Cart is empty</h1>
+         </div>
+         <!-- summary -->
+         <div class="flex flex-col gap-4 bg-gray-100 p-1">
+            <h1 class="font-bold">Summary</h1>
+            <div class="w-full flex flex-row items-center justify-between px-2"><p>Subtotal</p><p id="total">$000</p></div>
+            <div class="w-full flex flex-row items-center justify-between px-2"><p>Shipping</p><p>Free</p></div>
+            <button class="w-full bg-black text-white py-1">Checkout</button>
+         </div>
+    </div>
+
+    <!-- custom toast -->
+    <div class="hidden fixed top-14  left-0 z-20 rounded-md border-l-4 border-green-500 bg-green-100 p-4" id="toast">
+      <div class="flex items-center justify-between space-x-4">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 text-green-600"
+          >
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <div>
+          <p id="toastMessage" class="text-sm font-medium text-green-600">
+            Successfully added in the cart.
+          </p>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 cursor-pointer text-green-600"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
